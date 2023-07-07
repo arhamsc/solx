@@ -1,0 +1,14 @@
+/* @import "globals.css"; */
+@import "tailwindcss/utilities";
+
+.landing__register-section {
+  @apply sm:px-16 px-6 flex items-center xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto justify-between;
+}
+
+.landing__partner-grid-section {
+  @apply sm:px-16 px-6 flex items-center flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+}
+
+.landing__overview-section {
+  @apply sm:px-16 px-6 flex items-center xl:flex-row flex-col gap-6 relative z-0 max-w-[1440px] mx-auto justify-between;
+}

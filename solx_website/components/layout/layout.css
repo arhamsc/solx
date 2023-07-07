@@ -1,0 +1,10 @@
+.navbar__element-right-border {
+  @apply after:border-r-4 after:rounded-lg after:border-orange after:pr-3;
+}
+.navbar__element-left-border {
+  @apply before:border-r-4 before:border-orange after:pl-3;
+}
+
+.navbar__element-left-padding {
+  @apply before:pl-3;
+}
