@@ -17,9 +17,9 @@ export const footerLinks = [
     links: [
       {
         title: "Github",
-        url: "/",
+        url: "https://www.github.com/arhamsc",
       },
-      { title: "LinkedIn", url: "/" },
+      { title: "LinkedIn", url: "https://www.linkedin.com/arhamsc" },
     ],
   },
 ] as const;

@@ -2,7 +2,7 @@ require("@matterlabs/hardhat-zksync-solc");
 require("dotenv").config();
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  defaultNetwork: "ganache",
+  defaultNetwork: "infura_testnet",
   zksolc: {
     version: "1.3.9",
     compilerSource: "binary",
@@ -13,6 +13,12 @@ module.exports = {
     },
   },
   networks: {
+    infura_testnet: {
+      url: process.env.INFURA_URL,
+      ethNetwork: "goerli",
+      // chainId: 280,
+      accounts: [process.env.METAMASK_PRIVATE_KEY],
+    },
     ganache: {
       url: "http://localhost:7545",
       accounts: [`0x${process.env.PRIVATE_KEY}`],

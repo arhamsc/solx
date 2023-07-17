@@ -10,8 +10,6 @@
     "hardhat": "^2.13.0"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.9.2",
-    "@optionality.io/clone-factory": "^0.2.1",
     "@thirdweb-dev/contracts": "^3",
     "dotenv": "^16.3.1",
     "zksync-web3": "^0.14.3"

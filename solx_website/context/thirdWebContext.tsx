@@ -10,7 +10,7 @@ import {
   useMetamask,
 } from "@thirdweb-dev/react";
 import { MetaMaskWallet } from "@thirdweb-dev/wallets";
-import { BaseContract, ethers } from "ethers";
+import { BaseContract } from "ethers";
 import { createContext, ReactNode, useState } from "react";
 
 type ContextType = {
@@ -37,18 +37,26 @@ export const ThirdWebContextProvider = ({
   children: ReactNode;
 }) => {
   const [grids, setGrids] = useState<Grid[]>([]);
+  const gridFactoryAddress =
+    process.env.NODE_ENV === "development"
+      ? process.env.NEXT_PUBLIC_GRID_FACTORY_ADDRESS
+      : process.env.NEXT_PUBLIC_GRID_FACTORY_ADDRESS_INFURA;
+  const solXFactoryAddress =
+    process.env.NODE_ENV === "development"
+      ? process.env.NEXT_PUBLIC_SOLX_FACTORY_ADDRESS
+      : process.env.NEXT_PUBLIC_SOLX_FACTORY_ADDRESS_INFURA;
 
   const { contract: gridFactoryContract } = useContract(
-    `0x${process.env.NEXT_PUBLIC_GRID_FACTORY_ADDRESS}`,
+    `0x${gridFactoryAddress}`,
   );
 
   const { contract: solXFactoryContract } = useContract(
-    `0x${process.env.NEXT_PUBLIC_SOLX_FACTORY_ADDRESS}`,
+    `0x${solXFactoryAddress}`,
   );
 
-  const { contract: sampleGridContract } = useContract(
-    "0xF1D15D118EC0378B6162820358Ee433C40326eB5",
-  );
+  // const { contract: sampleGridContract } = useContract(
+  //   "0xF1D15D118EC0378B6162820358Ee433C40326eB5",
+  // );
 
   const { mutateAsync: createGridContract } = useContractWrite(
     gridFactoryContract,
