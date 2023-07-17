@@ -1,4 +1,4 @@
-import { Footer, Navbar, ThirdWebWrapper, WagmiWrapper } from "@components";
+import { Footer, Navbar, ThirdWebWrapper } from "@components";
 import "./globals.css";
 import { ThirdWebContextProvider } from "@context";
 // import riveWASMResource from "@rive-app/rive-wasm";

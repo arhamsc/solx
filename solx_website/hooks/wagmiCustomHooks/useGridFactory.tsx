@@ -1,19 +1,6 @@
-import { GridFactoryABI } from "@contracts";
 import useThirdWebContext from "@hooks/useThirdWebContext";
 import { useContractWrite } from "@thirdweb-dev/react";
-import { NewGridType } from "@types";
 import { useDebounce } from "usehooks-ts";
-// import {
-//   usePrepareContractWrite,
-//   useContractWrite,
-//   useWaitForTransaction,
-//   useContractRead,
-// } from "wagmi";
-
-// interface UseGridFactoryProps {
-//   formData: NewGridType | undefined;
-//   functionName: string;
-// }
 
 const useGridFactory = () => {
   const { gridFactoryContract } = useThirdWebContext();

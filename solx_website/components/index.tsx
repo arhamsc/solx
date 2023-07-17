@@ -20,7 +20,6 @@ import SolXCreateForm from "./solx/SolXCreateForm";
 import SolXDetailsModel from "./solx/SolXDetailsModel";
 import SolXFilters from "./solx/SolXFilters";
 /* Wrapper Imports */
-import WagmiWrapper from "./Wrapper/WagmiWrapper";
 import ClientOnly from "./Wrapper/ClientOnly";
 import ThirdWebWrapper from "./Wrapper/ThirdWebWrapper";
 import TransitionModelWrapper from "./Wrapper/TransitionModelWrapper";
@@ -34,7 +33,6 @@ export {
   Navbar,
   Hero,
   RegisterGrid,
-  WagmiWrapper,
   ClientOnly,
   GridList,
   InputField,
